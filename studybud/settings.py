@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-dbz_in%w&98ouxn!#1sgo7q%pe+@55=x09)wsttw13&ebum#2!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -50,6 +50,8 @@ MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
 
     "corsheaders.middleware.CorsMiddleware",
+
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
